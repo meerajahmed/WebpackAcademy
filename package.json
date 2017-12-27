@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/meerajahmed/WebpackAcademy#readme",
   "devDependencies": {
+    "file-loader": "^1.1.6",
     "webpack": "^3.10.0"
   }
 }
