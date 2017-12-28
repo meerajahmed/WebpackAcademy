@@ -4,8 +4,11 @@
   "description": "Webpack Academy",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch"
+    "build": "webpack --verbose",
+    "build:watch": "npm run build -- --watch",
+    "build:watch:dev": "npm run build:watch -- --env.env=dev",
+    "build:watch:prod": "npm run build:watch -- --env.env=prod",
+    "build:log": "npm run build -- --env.foo=1 --env.bar=2"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
   "homepage": "https://github.com/meerajahmed/WebpackAcademy#readme",
   "devDependencies": {
     "file-loader": "^1.1.6",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
   }
 }
