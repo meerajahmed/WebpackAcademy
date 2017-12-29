@@ -8,7 +8,17 @@
     "build:watch": "npm run build -- --watch",
     "build:watch:dev": "npm run build:watch -- --env.env=dev",
     "build:watch:prod": "npm run build:watch -- --env.env=prod",
-    "build:log": "npm run build -- --env.foo=1 --env.bar=2"
+    "build:dev": "npm run build -- --env.env=dev",
+    "build:dev:bundlebuddy": "npm run build:dev -- --env.addons=bundlebuddy",
+    "build:dev:bundleanalyzer": "npm run build:dev -- --env.addons=bundleanalyzer",
+    "build:prod": "npm run build -- --env.env=prod",
+    "build:prod:bundlebuddy": "npm run build:prod -- --env.addons=bundlebuddy",
+    "build:prod:bundleanalyzer": "npm run build:prod -- --env.addons=bundleanalyzer",
+    "build:all-addons": "npm run build:prod -- --env.addons=bundlebuddy --env.addons=bundleanalyzer",
+    "build:debug": "node --inspect-brk ./node_modules/.bin/webpack.js",
+    "build:debug:prod": "npm run build:debug -- --env.env=prod",
+    "build:log": "npm run build -- --env.foo=1 --env.bar=2",
+    "webpack-defaults": "webpack-defaults"
   },
   "repository": {
     "type": "git",
@@ -24,8 +34,10 @@
   },
   "homepage": "https://github.com/meerajahmed/WebpackAcademy#readme",
   "devDependencies": {
+    "bundle-buddy-webpack-plugin": "^0.3.0",
     "file-loader": "^1.1.6",
     "webpack": "^3.10.0",
+    "webpack-bundle-analyzer": "^2.9.1",
     "webpack-merge": "^4.1.1"
   }
 }
