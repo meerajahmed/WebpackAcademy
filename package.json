@@ -15,7 +15,7 @@
     "build:prod:bundlebuddy": "npm run build:prod -- --env.addons=bundlebuddy",
     "build:prod:bundleanalyzer": "npm run build:prod -- --env.addons=bundleanalyzer",
     "build:all-addons": "npm run build:prod -- --env.addons=bundlebuddy --env.addons=bundleanalyzer",
-    "build:debug": "node --inspect-brk ./node_modules/.bin/webpack.js",
+    "build:debug": "node --inspect-brk ./node_modules/.bin/webpack",
     "build:debug:prod": "npm run build:debug -- --env.env=prod",
     "build:log": "npm run build -- --env.foo=1 --env.bar=2",
     "webpack-defaults": "webpack-defaults"
@@ -36,6 +36,8 @@
   "devDependencies": {
     "bundle-buddy-webpack-plugin": "^0.3.0",
     "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-bundle-analyzer": "^2.9.1",
     "webpack-merge": "^4.1.1"
