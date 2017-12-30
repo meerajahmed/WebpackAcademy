@@ -8,7 +8,7 @@ const config = {
   // output: how and where to put the bundles and how to format them
   output: {
     // bundle.js has webpack run time code which enables browsers to run module in browser
-    filename: "[chunkhash]bundle.js",
+    filename: "[hash]bundle.js",
     path: commonPath.outputPath
   },
   module: {
