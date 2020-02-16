@@ -1,7 +1,11 @@
 // webpack manages every assets in out application by building dependency graph
 
-import fooString from "./foo";
-import bar from "./bar-cjs";
+import createCard from "./card";
+import "./index.css";
 import "./webpack-logo-on-white-bg.png";
 
-console.log(fooString, bar);
+createCard(
+  "Web Fundamentals: Webpack config for dev and prod env",
+  "Credits: Sean Larkin, Webpack Academy"
+);
+
